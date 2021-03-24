@@ -1,2 +1,5 @@
 # initial_lab
-Base repository for labs 1-4, initializes the repo and populates with an appropriate .gitignore file
+Lab3
+Amee Rothman
+arothman11
+475030
