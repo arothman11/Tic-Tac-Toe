@@ -124,8 +124,6 @@ int TicTacToe::turn() {
 		}
 	}
 
-	
-
 	board[board_width * y + x].display_ = (player) ? "o" : "x";
 	board[board_width * y + x].color_ = (player) ? black : red;
 	board[board_width * y + x].name_ = (player) ? "player o" : "player x";
@@ -151,22 +149,36 @@ int TicTacToe::turn() {
 int TicTacToe::play() {
 	cout << *this << endl;
 
-	while ((done() == false) && (draw() == false) && (num_moves != 0)) {
-		turn();
+	bool done_value = false;
+	bool draw_value = false;
+	int turn_value = 0;
+
+	while (((done_value = done()) == false) && (draw_value = draw() == false) && (num_moves != 0) && ((turn_value = turn())!= quit)) {
+		
 	}
 
-	if (done() == true) {
-		cout << "Player " << winningplayer << " wins." << endl;
+	if (done_value == true) {
+		if (winningplayer == 0) {
+			cout << "Player x wins." << endl;
+		}
+		else if (winningplayer == 1) {
+			cout << "Player o wins." << endl;
+		}
+		
 		return success;
 	}
-	else if (draw() == true) {
+	else if (draw_value == true) {
 		cout << "Game Over. There is no winner. Number of Moves Played: 9. No winning moves remain." << endl;
 		return gameover_draw;
+
 	}
-	else if (turn() == quit) {
+	else if (turn_value == quit) {
 		cout << "User Quit. Number of moves remaining: " << num_moves << endl;
 		return gameover_quit;
 	}
+	cout << done_value<<endl;
+	cout << draw_value << endl;
+
 	return success;
 }
 

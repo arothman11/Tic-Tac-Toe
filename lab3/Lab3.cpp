@@ -3,14 +3,16 @@
 
 
 int main(int argc, char* argv[]){
+    string TTT = "TicTacToe";
 
-    if (argc != 1) {
+    if (argc != num_arguments) {
         cout << "Invalid number of arguments." << endl;
-        cout << usagemessage(argv[programname], "Enter 1 valid argument.");
+        usagemessage(argv[programname], "Enter 1 valid argument.");
     }
-    if (argv[input_file] != "TicTacToe") {
+    if (argv[input_file] != TTT) {
+        cout << argv[input_file] << endl;
         cout << "Incorrect File Name." << endl;
-        cout << usagemessage(argv[programname], "Enter TicTacToe.");
+        usagemessage(argv[programname], "Enter TicTacToe.");
     }
 
     TicTacToe game;
