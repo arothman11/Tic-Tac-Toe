@@ -153,7 +153,7 @@ int TicTacToe::play() {
 	bool draw_value = false;
 	int turn_value = 0;
 
-	while (((done_value = done()) == false) && (draw_value = draw() == false) && (num_moves != 0) && ((turn_value = turn())!= quit)) {
+	while (((done_value = done()) == false) && ((draw_value = draw()) == false) && (num_moves != 0) && ((turn_value = turn())!= quit)) {
 		
 	}
 
@@ -176,8 +176,6 @@ int TicTacToe::play() {
 		cout << "User Quit. Number of moves remaining: " << num_moves << endl;
 		return gameover_quit;
 	}
-	cout << done_value<<endl;
-	cout << draw_value << endl;
 
 	return success;
 }
