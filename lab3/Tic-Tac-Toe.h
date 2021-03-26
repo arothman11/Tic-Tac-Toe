@@ -19,6 +19,7 @@ class TicTacToe {
 		bool player = 0;
 		bool winningplayer = 0;
 		unsigned int num_moves = 9;
+		//functions to check different ways of winning
 		bool vertical(vector<game_piece> board, int board_width, int board_height);
 		bool horizontal(vector<game_piece> board, int board_width, int board_height);
 		bool diagonal(vector<game_piece> board, int board_width, int board_height);
